@@ -7,16 +7,23 @@ var app = express()
 
 console.log("express inited")
 
-app.set('views',__dirname + "../views")
+app.set('views',__dirname + "/views")
 app.set("view engine", "jade")
 
 console.log("jade inited")
 
-app.use(express.static(__dirname+"../client"))
+//css, img etc coming from:
+var path= __dirname+"/../client"
+console.log(path)
 
-app.get("/",function(req,res){
-    
-    res.render("index.html")
+app.use(express.static(path))
+
+app.get("/d",function(req,res){    res.render("default") 
 })
+
+app.get("/j",function(req,res){    res.render("index", {title:"Jadeism"}) 
+})
+
+
 
 app.listen(portNo, function() {console.log("index.js listening")})
