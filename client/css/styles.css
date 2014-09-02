@@ -1,0 +1,102 @@
+/* clear everything out */
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    line-height:1.5;
+    font-family:Arial;
+    font-size:14px;
+    color:#003;
+    background:#fea;
+}
+
+.container{
+    width:95%;
+    margin:auto;
+    overflow:hidden;
+}
+
+header{
+    padding:20px 10px;
+    color:#fff;
+    background:#333;
+    margin-bottom:20px;
+    
+}
+
+
+.main-content {
+    float:left;
+    margin-bottom:20px;
+    width:70%;
+}
+
+.sidebar{
+    float:right;
+    width:27%;
+    
+}
+
+.sidebar .block{
+    border-radius:5px;
+    border:1px solid #ccc;
+    padding:0px 10px 10px 10px;
+    background:#f4f4f4;
+    overflow:hidden;
+    
+}
+
+.sidebar .block h1{
+    margin:13px 10px 4px;
+    padding-bottom:10px;
+    border-bottom:1px dotted #ddd;
+    
+}
+
+.readmore{
+    float:right;
+    
+}
+
+.readmore a{
+    color:green;
+    
+}
+
+footer{
+    border-top:1px dotted #ccc;
+    padding-top:5px;
+    text-align:center;
+    margin-top:20px;
+    
+}
+
+
+/*when browser is under 568px the following applies: */
+@media(max-width:568px){
+    header{
+        text-align:center;
+    }
+    
+    .main-content{
+        float:none;
+        width:100%;
+        clear:both;
+        text-align:center;
+    }
+    
+    .sidebar{
+        float:none;
+        width:100%;
+        clear:both;
+        text-align:center;
+    }
+    
+    .sidebar .block{
+        margin:0;
+        
+    }
+}
